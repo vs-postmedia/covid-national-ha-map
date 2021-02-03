@@ -1,18 +1,5 @@
-# template for data-driven mapbox maps
+# Map of COVID-19 cases/deaths in Canada by health authority
 
-# Built with create-react-app.
-
-
-# mapbox.config
-const mapbox_config = {
-	"accessToken": "access-token"
-};
-
-export default mapbox_config;
-
-
-
-# ###
 # EMBED
 
-<iframe src="https://vs-postmedia.github.io/{SLUG}/" height="1000" scrolling="yes"></iframe>
+<iframe src="https://vs-postmedia.github.io/covid-national-ha-map/" height="1000"></iframe>

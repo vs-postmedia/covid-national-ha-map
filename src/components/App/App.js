@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import MapboxMap from '../MapboxMap/MapboxMap';
 import './App.css';
 import mapboxConfig from '../../data/mapbox-config';
 
 
 // Wildfires url
-const mapData = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/wildfires.json';
+const mapDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/wildfires.json';
 
 // map tiles & attribution
 const mapboxStyle = 'mapbox://styles/mapbox/outdoors-v11';
@@ -13,8 +13,10 @@ const mapboxStyle = 'mapbox://styles/mapbox/outdoors-v11';
 // map options
 const circleMarkerClassField = 'FIRE_STATU';
 const mapDataSource = 'wildfires';
+const windowWidth = window.innerWidth;
+
 const mapOptions = {
-	center: window.innerWidth > 400 ? [51.184179, -121.752423] : [52.184179, -121.752423],
+	center: windowWidth > 400 ? [54.7, -93.98] : [58.2, -94.1],
 	// see mapbox
 	circleColours: [
 		'match',
@@ -35,19 +37,22 @@ const mapOptions = {
 	classField: circleMarkerClassField,
 	maxZoom: 8,
 	minZoom: 3,
-	zoom: window.innerWidth > 400 ? 5 : 4
+	zoom: windowWidth > 400 ? 2.75 : 2
 }
 
 
 function App() {
 	return (
-		<MapboxMap
-			data={mapData}
-			mapDataSource={mapDataSource}
-			mapboxConfig={mapboxConfig}
-			mapboxStyle={mapboxStyle}
-			mapOptions={mapOptions}>
-		</MapboxMap>
+		<Fragment>
+			<h2>Cumulative cases by health region</h2>
+			<MapboxMap
+				data={mapDataUrl}
+				mapDataSource={mapDataSource}
+				mapboxConfig={mapboxConfig}
+				mapboxStyle={mapboxStyle}
+				mapOptions={mapOptions}>
+			</MapboxMap>
+		</Fragment>
 	);
 }
 

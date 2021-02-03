@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import CircleMap from '../CircleMap/CircleMap';
 import './MapboxMap.css';
 
@@ -35,25 +35,21 @@ export class MapBoxMap extends Component {
 
 	render() {
 		return (
-			<Fragment>
-				<h1>Mapbox Map</h1>
-
-				<CircleMap
-					center={this.props.mapOptions.center}
-					circleColours={this.props.mapOptions.circleColours}
-					circleMarkerClassField={this.props.mapOptions.classField}
-					circleSizeMetric={this.props.mapOptions.circleSizeMetric}
-					config={this.props.mapboxConfig}
-					container="mapview"
-					data={this.state.data_display}
-					data_all={this.state.data_all}
-					mapboxStyle={this.props.mapboxStyle}
-					mapDataSource={this.props.mapDataSource}
-					maxZoom={this.props.mapOptions.maxZoom}
-					minZoom={this.props.mapOptions.minZoom}
-					zoom={this.props.mapOptions.zoom}>
-				</CircleMap>
-			</Fragment>
+			<CircleMap
+				center={this.props.mapOptions.center}
+				circleColours={this.props.mapOptions.circleColours}
+				circleMarkerClassField={this.props.mapOptions.classField}
+				circleSizeMetric={this.props.mapOptions.circleSizeMetric}
+				config={this.props.mapboxConfig}
+				container="mapview"
+				data={this.state.data_display}
+				data_all={this.state.data_all}
+				mapboxStyle={this.props.mapboxStyle}
+				mapDataSource={this.props.mapDataSource}
+				maxZoom={this.props.mapOptions.maxZoom}
+				minZoom={this.props.mapOptions.minZoom}
+				zoom={this.props.mapOptions.zoom}>
+			</CircleMap>
 		);
 	}
 }

@@ -1,6 +1,6 @@
 {
-  "name": "mapbox-template",
-  "homepage": "https://vs-postmedia.github.io/mapbox-template",
+  "name": "covid-national-ha-map",
+  "homepage": "https://vs-postmedia.github.io/covid-national-ha-map",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
