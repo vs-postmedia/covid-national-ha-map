@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import Tooltip from '../Tooltip/Tooltip';
 
 import './CircleMap.css';
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
 
 export class CircleMap extends Component {
@@ -113,9 +115,6 @@ export class CircleMap extends Component {
 	renderMap(data) {
 		this.prepData(data);
 
-		console.log(data)
-		console.log(this.props)
-
 		// add fire location
 		this.map.on('load', () => {
 			this.map.addSource('data-layer', {
@@ -126,7 +125,6 @@ export class CircleMap extends Component {
 			this.map.addLayer({
 				id: 'data-layer',
 				type: 'circle',
-				// source: this.props.mapDataSource,
 				source: 'data-layer',
 				paint: {
 					'circle-color': this.props.circleColours,
@@ -150,6 +148,14 @@ export class CircleMap extends Component {
 					'circle-stroke-color': '#FFF'
 				}
 			});
+
+			// add search box & nav controls 
+			this.map.addControl(
+				new MapboxGeocoder({
+					accessToken: this.props.config.accessToken,
+					mapboxgl: mapboxgl
+				}))
+			this.map.addControl(new mapboxgl.NavigationControl());
 
 			// show & hide the popup
 			this.map.on('mouseenter', 'data-layer', this.showPopup);

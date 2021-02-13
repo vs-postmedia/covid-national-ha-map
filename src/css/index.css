@@ -19,13 +19,16 @@ a {
 	font-family: Shift-BoldItalic, serif;
 	font-size: 1.75rem;
 	margin-bottom: 0.5rem;
+	-webkit-font-smoothing: auto;
 }
 .App h2 {
 	font-family: BentonSansCond-Bold, serif;
 	margin: 15px 0;
+	-webkit-font-smoothing: auto;
 }
 .App h3 {
 	font-family: BentonSansCond-Bold, serif;
+	-webkit-font-smoothing: auto;
 }
 
 .App p {
