@@ -1,0 +1,67 @@
+/* POSTMEDIA STYLES */
+.App h1 {
+	color: var(--black);
+	font-family: Shift-BoldItalic, serif;
+	font-size: 1.4rem;
+	margin-bottom: 0.5rem;
+}
+.App h2 {
+	color: var(--black);
+	font-family: BentonSansCond-Bold, sans-serif;
+	margin: 1px 0;
+}
+.App h3 {
+	color: var(--black);
+	font-family: BentonSansCond-Bold, sans-serif;
+}
+.App h4 {
+	color: var(--black);
+	font-family: BentonSansCond-Regular, sans-serif;
+	font-size: 0.8rem;
+}
+
+.App p {
+	color: var(--black);
+	font-family: BentonSansCond-Regular, Helvetica, sans-serif;
+	line-height: 1.3rem;
+	margin: 0;
+}
+
+.App footer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.App footer > p {
+	flex: 1;
+}
+.App footer .note {
+	color: var(--grey02);
+	flex: 0 0 100%;
+	font-family: BentonSansCond-RegItalic, italic;
+}
+
+.App footer > div {
+	margin-top: 0 !important;
+}
+
+.App .note,
+.App .source,
+.App .credit {
+	font-size: 0.8rem;
+}
+
+.App .credit {
+	text-align: right;
+}
+
+.App .source a {
+	color: inherit;
+}
+
+@media only screen and (min-width: 500px) {
+    /* Style adjustments for viewports that meet the condition */
+    .App h1 {
+    	font-size: 2rem;
+    }
+}

@@ -21,7 +21,7 @@ const windowWidth = window.innerWidth;
 const mapOptions = {
 	center: windowWidth > 400 ? [54.7, -93.98] : [58.2, -94.1],
 	// see mapbox
-	circleColours: 'steelblue',
+	circleColours: '#0062A3',
 	circleSizeMetric: 'cases_100k', 
 	classField: circleMarkerClassField,
 	maxZoom: 8,
@@ -33,7 +33,7 @@ const mapOptions = {
 function App() {
 	return (
 		<Fragment>
-			<h2>Cumulative cases by health region</h2>
+			<h2>COVID-19 cases per 100,000 people, by health region</h2>
 			<MapboxMap
 				data={mapDataUrl}
 				mapDataSource={mapDataSource}
@@ -41,6 +41,7 @@ function App() {
 				mapboxStyle={mapboxStyle}
 				mapOptions={mapOptions}>
 			</MapboxMap>
+			<p className="source">Source: <a href="https://opencovid.ca" target="_blank">COVID-19 Canada Open Data Working Group</a></p>
 		</Fragment>
 	);
 }

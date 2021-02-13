@@ -128,7 +128,7 @@ export class CircleMap extends Component {
 				source: 'data-layer',
 				paint: {
 					'circle-color': this.props.circleColours,
-					'circle-opacity': 0.6,
+					'circle-opacity': 0.2,
 					'circle-radius': [
 						'interpolate',
 						['linear'],
@@ -145,7 +145,7 @@ export class CircleMap extends Component {
 					// 	1
 					// ],
 					'circle-stroke-width': 0.5,
-					'circle-stroke-color': '#FFF'
+					'circle-stroke-color': '#0062a3'
 				}
 			});
 

@@ -3,16 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 
-// FONTS
-import './fonts/BentonSansCond-Regular.otf';
-import './fonts/BentonSansCond-RegItalic.otf';
-import './fonts/BentonSansCond-Bold.otf';
-import './fonts/BentonSansCond-BoldItalic.otf';
-import './fonts/Shift-Bold.otf';
-import './fonts/Shift-BoldItalic.otf';
 
 
 // CSS
+import normalize from './css/normalize.css';
+import postmedia from './css/postmedia.css';
+import colours from './css/colors.css';
+import fonts from './css/fonts.css';
 import './css/index.css';
 
 
