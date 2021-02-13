@@ -17,18 +17,10 @@ export class MapBoxMap extends Component {
 	componentDidMount() {
 		Axios.get(this.props.data)
 			.then(resp => {
-				// process data here...
-				const mapData = {
-					type: 'FeatureCollection',
-					features: resp.data.features
-				};
-
-				console.log(mapData);
-
 				// update our state with the new data
 				this.setState({
 					data_all: resp.data,
-					data_display: mapData,
+					data_display: resp.data,
 				});
 			});
 	}

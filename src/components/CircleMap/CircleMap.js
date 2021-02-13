@@ -113,9 +113,12 @@ export class CircleMap extends Component {
 	renderMap(data) {
 		this.prepData(data);
 
+		console.log(data)
+		console.log(this.props)
+
 		// add fire location
 		this.map.on('load', () => {
-			this.map.addSource('wildfires', {
+			this.map.addSource('data-layer', {
 				type: 'geojson',
 				data: data
 			});
@@ -123,24 +126,34 @@ export class CircleMap extends Component {
 			this.map.addLayer({
 				id: 'data-layer',
 				type: 'circle',
-				source: this.props.mapDataSource,
+				// source: this.props.mapDataSource,
+				source: 'data-layer',
 				paint: {
 					'circle-color': this.props.circleColours,
-					'circle-opacity': 0.7,
-					// probably a better way to do this...
+					'circle-opacity': 0.6,
 					'circle-radius': [
-						'*',
-						['get', 'radius'],
-						1
+						'interpolate',
+						['linear'],
+						['get', this.props.circleMarkerClassField],
+						100,
+						5,
+						5000,
+						15
 					],
+					// probably a better way to do this...
+					// 'circle-radius': [
+					// 	'*',
+					// 	['get', 'radius'],
+					// 	1
+					// ],
 					'circle-stroke-width': 0.5,
 					'circle-stroke-color': '#FFF'
 				}
 			});
 
 			// show & hide the popup
-			this.map.on('mouseenter', 'wildfires', this.showPopup);
-			this.map.on('mouseleave', 'wildfires', this.hidePopup);
+			this.map.on('mouseenter', 'data-layer', this.showPopup);
+			this.map.on('mouseleave', 'data-layer', this.hidePopup);
 		});
 
 		this.setState({
