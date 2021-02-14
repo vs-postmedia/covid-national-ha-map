@@ -6,10 +6,10 @@ import * as serviceWorker from './serviceWorker';
 
 
 // CSS
-import normalize from './css/normalize.css';
-import postmedia from './css/postmedia.css';
-import colours from './css/colors.css';
-import fonts from './css/fonts.css';
+import './css/normalize.css';
+import './css/postmedia.css';
+import './css/colors.css';
+import './css/fonts.css';
 import './css/index.css';
 
 

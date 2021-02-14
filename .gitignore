@@ -1,6 +1,6 @@
 # Mapbox api key
 src/data/mapbox-config.js
-
+build/
 # Logs
 logs
 *.log

@@ -6,6 +6,7 @@ const Tooltip = (props) => {
 	return `
 		<div>
 			<h3>${props.esri_name}</h3>
+			<p class="prov-name">${props.short_name}</p>
 
 			<p>There have been a total of ${Helper.numberWithCommas(props.cumulative_cases)} cases and ${Helper.numberWithCommas(props.cumulative_deaths)} deaths from the the coronavirus.</p>
 		</div>

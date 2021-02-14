@@ -41,7 +41,7 @@ function App() {
 				mapboxStyle={mapboxStyle}
 				mapOptions={mapOptions}>
 			</MapboxMap>
-			<p className="source">Source: <a href="https://opencovid.ca" target="_blank">COVID-19 Canada Open Data Working Group</a></p>
+			<p className="source">Source: <a href="https://opencovid.ca" target="_blank" rel="noopener noreferrer">COVID-19 Canada Open Data Working Group</a></p>
 		</Fragment>
 	);
 }
