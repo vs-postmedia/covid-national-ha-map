@@ -2,7 +2,7 @@
 	white-space: normal;
 }
 .mapboxgl-popup-content {
-	width: 175px;
+	width: 200px;
 }
 .App .mapboxgl-popup-content h3 {
 	font-size: 1rem;

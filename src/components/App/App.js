@@ -5,12 +5,10 @@ import mapboxConfig from '../../data/mapbox-config';
 
 
 // Wildfires url
-// const mapDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/wildfires.json';
 const mapDataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid/covid-hr-cases.json';
 
 
 // map tiles & attribution
-// const mapboxStyle = 'mapbox://styles/mapbox/outdoors-v11';
 const mapboxStyle = 'mapbox://styles/ngriffiths-postmedia/ckl2widct1euv17mkqgsryqff';
 
 // map options
@@ -24,7 +22,7 @@ const mapOptions = {
 	circleColours: '#0062A3',
 	circleSizeMetric: 'cases_100k', 
 	classField: circleMarkerClassField,
-	maxZoom: 8,
+	maxZoom: 5,
 	minZoom: 3,
 	zoom: windowWidth > 400 ? 2.75 : 1.75
 }
