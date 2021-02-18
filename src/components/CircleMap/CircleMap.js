@@ -36,9 +36,11 @@ export class CircleMap extends Component {
 		mapboxgl.accessToken = this.props.config.accessToken;
 		
 		this.map = new mapboxgl.Map({
-			container: this.mapContainer,
-			style: this.props.mapboxStyle,
 			center: [this.props.center[1], this.props.center[0]],
+			container: this.mapContainer,
+			maxZoom: this.props.maxZoom,
+			minZoom: this.props.minZoom,
+			style: this.props.mapboxStyle,
       		zoom: this.props.zoom
 		});
 
