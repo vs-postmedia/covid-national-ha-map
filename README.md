@@ -2,4 +2,4 @@
 
 # EMBED
 
-<iframe src="https://vs-postmedia.github.io/covid-national-ha-map/" height="1000"></iframe>
+<iframe src="https://vs-postmedia.github.io/covid-national-ha-map/" height="600"></iframe>
