@@ -48,6 +48,7 @@
 .App .note,
 .App .source,
 .App .credit {
+	color: var(--grey02);
 	font-size: 0.8rem;
 }
 

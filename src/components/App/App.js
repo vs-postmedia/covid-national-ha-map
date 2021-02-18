@@ -39,7 +39,7 @@ function App() {
 				mapboxStyle={mapboxStyle}
 				mapOptions={mapOptions}>
 			</MapboxMap>
-			<p className="source">Source: <a href="https://opencovid.ca" target="_blank" rel="noopener noreferrer">COVID-19 Canada Open Data Working Group</a></p>
+			<p className="source">Source: <a href="https://opencovid.ca" target="_blank" rel="noopener noreferrer">COVID-19 Canada Open Data Working Group</a>.  NOTE: Circles are sized based on the rate of COVID-19 cases per 100,000 people. Circles are positioned in the geographic centre of each health region.</p>
 		</Fragment>
 	);
 }
