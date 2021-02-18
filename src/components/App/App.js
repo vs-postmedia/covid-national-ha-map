@@ -23,7 +23,7 @@ const mapOptions = {
 	circleSizeMetric: 'cases_100k', 
 	classField: circleMarkerClassField,
 	maxZoom: 5,
-	minZoom: 3,
+	minZoom: 1.75,
 	zoom: windowWidth > 400 ? 2.75 : 1.75
 }
 
